@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Route, Switch} from 'module';
 import Footer from './components/Footer/main';
 import Hero from './components/Hero/main';
@@ -8,6 +9,7 @@ import Navbar from './components/Navbar/main';
 import Product from './container/Product/main';
 import Home from './container/Home/main';
 import Login from './container/Login/main';
+import Sell from './container/Sell/main'
 
 function App() {
   return (
@@ -17,10 +19,11 @@ function App() {
       <Information />
       <Footer /> */}
       {/* <Product /> */}
-      <Home />
+      <Sell />
+      {/* <Home /> */}
       {/* <Login /> */}
       {/* <Route>
-      <Home />
+       <Home />
         <Route path='/' exact component={Home} /> */}
         {/* <Route path='/product' component={Product}/>
       </Route> */}
