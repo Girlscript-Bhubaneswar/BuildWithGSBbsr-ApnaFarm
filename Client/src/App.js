@@ -10,19 +10,21 @@ import Product from './container/Product/main';
 import Home from './container/Home/main';
 import Login from './container/Login/main';
 import Sell from './container/Sell/main'
-
+import Temp from './Temp'
 function App() {
   return (
     <>
+      <Temp/>
       {/* <Navbar />
       <Hero />
       <Information />
       <Footer /> */}
       {/* <Product /> */}
-      <Sell />
+      {/* <Sell /> */}
       {/* <Home /> */}
       {/* <Login /> */}
       {/* <Route>
+      
        <Home />
         <Route path='/' exact component={Home} /> */}
         {/* <Route path='/product' component={Product}/>
