@@ -1,0 +1,31 @@
+/* --------------- Site title ---------------- */
+.site-title{
+    background: url('../../assets/background.jpg');
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+.site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.site-title h1, h3{
+    margin: .3rem;
+}
+
+.site-title .btn{
+    margin: 1.8rem;
+    background: var(--sky);
+}
+
+.site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+/* --------x------ Site title --------x------- */
