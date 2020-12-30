@@ -1,55 +1,45 @@
-import React from 'react'
-// import MenuIcon from '@material-ui/icons/Menu';
+import React, { useState } from 'react'
+import Button from './Button'
 import { NavLink } from 'react-router-dom'
-
-/**
-* @author
-* @function Navbar
-**/
+import EcoIcon from '@material-ui/icons/Eco';
+import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
+import './Navbar.css'
 
 const Navbar = (props) => {
-    return (
-        <nav class="nav">
-            <div class="nav-menu flex-row">
-                <div class="nav-brand">
-                    <a href="#" class="text-gray">Farmer</a>
-                </div>
-                <div class="toggle-collapse">
-                    <div class="toggle-icons">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </div>
-                <div>
-                    <ul class="nav-items">
-                        <li class="nav-link">
-                            <a to="/">Home</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#">Category</a>
-                        </li>
-                        <li class="nav-link">
-                            <a to="/product">Products</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#">Pages</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#">Contact Us</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="login.html">Login/SignUp</a>
-                        </li>
 
-                    </ul>
-                </div>
-                <div class="social text-gray">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
+    const [state, setState] = useState({ clicked: false })
+
+    const handelClick = () => {
+        setState({ clicked: !state.clicked })
+    }
+
+    return (
+        <>
+            <div className="NavbarItems">
+                <h1 className="navbar_logo">Farmer<EcoIcon className="leaf_icons" /></h1>
+
+                {state.clicked ? (
+                    <div className="menu_icon" onClick={handelClick}>
+                        <CloseIcon className="icons" />
+                    </div>
+                ) : (
+                        <div className="menu_icon" onClick={handelClick}>
+                            <MenuIcon className="icons" />
+                        </div>
+                    )}
+
+                <ul className={state.clicked ? 'nav_menu active' : 'nav_menu'}>
+                    <li><NavLink className='nav-links' to="/">Home</NavLink></li>
+                    <li><NavLink className='nav-links' to="/services">Services</NavLink></li>
+                    <li><NavLink className='nav-links' to="/product">Products</NavLink></li>
+                    <li><NavLink className='nav-links' to="/contact-us">Contact Us</NavLink></li>
+                    {/* <li><NavLink className='nav-links' to="/Sell">Sell</NavLink></li> */}
+                    <li><NavLink className='nav-links-mobile' to="/login">Login</NavLink></li>
+                </ul>
+                <NavLink to="/login"><Button/></NavLink>
             </div>
-        </nav>
+        </>
     )
 
 }
