@@ -6,7 +6,7 @@ The Apna-Farm strategy for accurately detecting flaws in the traditional practis
 
 
 ## Components
-<img src="images/" alt="diagram" width="600"/>
+
   
 ## Quick start
 
