@@ -1,0 +1,122 @@
+.NavbarItems{
+    background-image: linear-gradient(to right top, #00d800, #4fdd00, #73e200, #8fe703, #a8eb12);
+    font-size: 1.2rem;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar_logo{
+    color: #fff;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.fa-react{
+    margin-left: .5rem;
+    font-size: 1.6rem;
+}
+.nav_menu{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 20px;
+}
+.nav-links{
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+.nav-links:hover{
+    background-color: #2cfc71;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+}
+CloseIcon, MenuIcon{
+    display: none;
+    color: #fff;
+}
+.leaf_icons{
+    margin-left: .5rem;
+}
+.icons{
+    display: none;
+    color: whitesmoke;
+}
+.nav-links-mobile{
+    display: none;
+}
+@media screen and (max-width: 960px){
+    .NavbarItems{
+        position: relative;
+        padding: .7rem 0;
+        height: 58px;
+    }
+    .nav_menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 380px;
+        position: absolute;
+        top: 58px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    .nav_menu.active{
+        background: #02d802;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+    .nav-links{
+        text-align: center;
+        padding: 1.5rem;
+        width: 100%;
+        display: table;
+    }
+    .nav-links:hover{
+        border-radius: 0;
+        background-color: #23f782;
+    }
+    .navbar_logo{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(25%, 25%);
+    }
+    .icons{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        transform: translate(-100%,65%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+    .nav-links-mobile{
+        display: block;
+        text-align: center;
+        padding: .8rem;
+        margin: auto;
+        border-radius: 4px;
+        width: 80%;
+        background: #4ad9e4;
+        color: #fff;
+        opacity: .9;
+        font-size: 1.3rem;
+        text-decoration: none;
+    }
+    .nav-links-mobile:hover{
+        background-color: #fff;
+        color: #6568f4;
+        transition: all .5s ease;
+    }
+    Button{
+        display: none;
+    }
+}
