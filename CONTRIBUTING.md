@@ -27,10 +27,7 @@
   `git checkout -b <your-branch-name>`
 
 - **Update the changes to repo**: Add your solution in the new branch. The solution must be in a specified format. Your code should be inside the SOLUTIONS folder of the respective problem statement. The codes/files should be inside a single folder following specific naming convention. The solution folder name should be `<your GitHub Id>_<your name>`.
-  - Root Folder
-    - Problem Statement
-      - Solutions
-        - `<Your solution folder>`
+  
 - **To stage the file(s)** , use the following CLI command
 
   `git add .`
@@ -50,8 +47,6 @@
   For GitHub web, simply move over to the original repository and click on New Pull Request and compare forked repositories. Provide appropriate description and VOILA!
 
   ![Pull Request](assets/images/pr.png)
-
-  ![Pull Request and Compare](assets/images/pr_compare.png)
 
 - **PR Review**: Once you have created the PR, it will be reviewed soon by the maintainers of the repository
 
